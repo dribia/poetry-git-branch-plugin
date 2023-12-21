@@ -7,7 +7,7 @@ Our main use case is in situations where DBT needs access to the current git bra
 ## Installation
 Install as any other poetry plugin:
 ```bash
-poetry self add poetry-git-branch
+poetry self add poetry-git-branch-plugin
 ```
 
 ## Development
