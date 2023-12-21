@@ -15,8 +15,8 @@ If you are developing this plugin, you can install it locally by building a whee
 ```bash
 poetry build
 ```
-and installing it with your system-wide pip.
+and installing it with your system-wide or pyenv-wide pip.
 ```bash
-# not inside pycharm
+# not inside pycharm nor inside a poetry shell
 pip install /path/to/poetry-git-branch-plugin/dist/poetry_git_branch_plugin-0.1.0-py3-none-any.whl
 ```
