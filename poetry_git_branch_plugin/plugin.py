@@ -18,8 +18,6 @@ class PoetryGitBranchPlugin(ApplicationPlugin):
         if not isinstance(event.command, EnvCommand):
             return
 
-        io = event.io
         env_var = "POETRY_GIT_BRANCH"
-        io.write_line(f"Setting {env_var} environment variable...")
-        branch = os.popen("git symbolic-ref --short HEAD").read().strip()
-        os.environ[env_var] = branch
+        event.io.write_line(f"Setting {env_var} environment variable...")
+        os.environ[env_var] = os.popen("git symbolic-ref --short HEAD").read().strip()
