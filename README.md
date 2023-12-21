@@ -11,4 +11,12 @@ poetry self add poetry-git-branch
 ```
 
 ## Development
-If you are developing this plugin, you can install it locally by building a wheels file and installing it with your system-wide pip.
+If you are developing this plugin, you can install it locally by building a wheels file
+```bash
+poetry build
+```
+and installing it with your system-wide pip.
+```bash
+# not inside pycharm
+pip install /path/to/poetry-git-branch-plugin/dist/poetry_git_branch_plugin-0.1.0-py3-none-any.whl
+```
