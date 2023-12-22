@@ -5,13 +5,8 @@ A simple poetry plugin that sets an environment variable containint the name of 
 Our main use case is in situations where DBT needs access to the current git branch name to set the name of the target schema.
 
 ## Installation
-Install as any other poetry plugin:
-```bash
-poetry self add poetry-git-branch-plugin
-```
-
-## Development
-If you are developing this plugin, you can install it locally by building a wheels file
+The plugin cannot be installed with `poetry self add` because it is not published on PyPI.
+Instead, you can install it by building a wheels file
 ```bash
 poetry build
 ```
