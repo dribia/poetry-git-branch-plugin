@@ -19,5 +19,5 @@ class PoetryGitBranchPlugin(ApplicationPlugin):
             return
 
         env_var = "POETRY_GIT_BRANCH"
-        event.io.write_line(f"Setting {env_var} environment variable...")
+        # event.io.write_line(f"Setting {env_var} environment variable...")
         os.environ[env_var] = os.popen("git symbolic-ref --short HEAD").read().strip()
