@@ -1,5 +1,5 @@
 # Poetry Git Branch Plugin
-A simple poetry plugin that sets an environment variable containint the name of the current checked-out branch before executing any poetry command.
+A simple poetry plugin that sets an environment variable containing the name of the current checked-out branch before executing any poetry command.
 
 ## Why
 Our main use case is in situations where DBT needs access to the current git branch name to set the name of the target schema.
