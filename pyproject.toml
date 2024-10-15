@@ -80,7 +80,7 @@ markers = [
 ]
 
 [tool.coverage.run]
-source = ["poeetry_git_branch_plugin"]
+source = ["poetry_git_branch_plugin"]
 branch = true
 
 [tool.coverage.report]
