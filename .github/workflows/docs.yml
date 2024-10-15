@@ -28,3 +28,5 @@ jobs:
         run: poetry install --only main,lint
       - name: Lint
         run: make lint
+      - name: Publish Docs
+        run: poetry run mkdocs gh-deploy --force
