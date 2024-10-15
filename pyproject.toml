@@ -8,11 +8,6 @@ license = "MIT"
 readme = "README.md"
 repository = "https://github.com/dribia/poetry-git-branch-plugin"
 homepage = "https://github.com/dribia/poeetry-git-branch-plugin"
-classifiers = [
-    "Natural Language :: English",
-    "Operating System :: OS Independent",
-    "Topic :: Poetry Plugin",
-]
 keywords = ["poetry", "plugin", "branch", "environment"]
 
 [tool.poetry.dependencies]
