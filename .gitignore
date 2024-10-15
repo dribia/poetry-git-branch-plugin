@@ -3,9 +3,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# conf files
-salesforce_access_config
-
 # C extensions
 *.so
 
@@ -53,24 +50,12 @@ coverage.xml
 *.mo
 *.pot
 
-# Django stuff:
-*.log
-.static_storage/
-.media/
-local_settings.py
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
 # Sphinx documentation
 docs/sphinx/build/
 docs/sphinx/source/api/
 docs/sphinx/source/README.rst
 docs/sphinx/source/LICENSE.rst
+docs/sphinx/source/thirdparty.rst
 
 # PyBuilder
 target/
@@ -81,12 +66,6 @@ target/
 # pyenv
 .python-version
 
-# celery beat schedule file
-celerybeat-schedule
-
-# SageMath parsed files
-*.sage.py
-
 # Environments
 .env
 .venv
@@ -96,13 +75,6 @@ ENV/
 env.bak/
 venv.bak/
 
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
 # mkdocs documentation
 /site
 
@@ -111,15 +83,3 @@ venv.bak/
 
 # pycharm
 .idea/
-
-# config overrides
-bowser/config/_*yml
-bowser/config/_*yaml
-
-# catboost folder
-catboost_info/*
-notebooks/catboost_info/*
-notebooks/*/catboost_info/*
-
-# sqlite databases files
-data/db/*db
