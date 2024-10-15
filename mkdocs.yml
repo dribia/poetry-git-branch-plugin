@@ -1,5 +1,5 @@
 site_name: poetry-git-branch-plugin
-site_description: Python package to convert dbt models to PDF files.
+site_description: A poetry plugin to store the current git branch into environment variable when poetry runs any command.
 strict: true
 
 theme:
