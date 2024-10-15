@@ -34,7 +34,27 @@ Poetry Git Branch Plugin
 * Allows to use the current Git branch name in any command executed by Poetry.
 
 ## Installation
-**poetry-git-branch-plugin** is available on PyPI, so you can install it with `pip`:
-```shell
+
+Depending on how you installed poetry, there are different ways to install this plugin.
+
+The easiest way to install this plugin is to use the `poetry self add` command:
+```console
+poetry self add poetry-git-branch-plugin
+```
+
+If you installed poetry using `pip`:
+```console
 pip install poetry-git-branch-plugin
+```
+
+If you installed poetry using `pipx`:
+```console
+pipx inject poetry poetry-git-branch-plugin
+```
+
+You can also specify that a plugin is required for your project in the
+`tool.poetry.requires-plugins` section of the `pyproject.toml` file:
+```yaml
+[tool.poetry.requires-plugins]
+poetry-git-branch-plugin = ">=0.0.1"
 ```
