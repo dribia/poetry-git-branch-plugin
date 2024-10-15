@@ -36,15 +36,28 @@ A simple poetry plugin that sets an environment variable containing the name of 
 
 ## Installation
 
-This project resides in the Python Package Index (PyPI), so it can easily be installed with `pip`:
+Depending on how you installed poetry, there are different ways to install this plugin.
 
+The easiest way to install this plugin is to use the `poetry self add` command:
+```console
+poetry self add poetry-git-branch-plugin
+```
+
+If you installed poetry using `pip`:
 ```console
 pip install poetry-git-branch-plugin
 ```
 
-And then using `poetry`:
+If you installed poetry using `pipx`:
 ```console
-poetry self add poetry-git-branch-plugin
+pipx inject poetry poetry-git-branch-plugin
+```
+
+You can also specify that a plugin is required for your project in the
+`tool.poetry.requires-plugins` section of the `pyproject.toml` file:
+```yaml
+[tool.poetry.requires-plugins]
+poetry-git-branch-plugin = ">=0.0.1"
 ```
 
 ## Usage
