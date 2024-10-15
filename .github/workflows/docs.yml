@@ -1,16 +1,12 @@
-name: Lint
+name: Docs
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    types: [opened, synchronize]
-    branches:
-      - main
+  release:
+    types:
+      - created
 
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -25,6 +21,6 @@ jobs:
           python-version: ${{ matrix.python-version }}
           cache: 'poetry'
       - name: Install Dependencies
-        run: poetry install --only main,lint
-      - name: Lint
-        run: make lint
+        run: poetry install --only docs
+      - name: Publish Docs
+        run: poetry run mkdocs gh-deploy --force
