@@ -1,7 +1,7 @@
-PROJECT:= poetry_git_branch_plugin
-TESTS:= tests
+.PHONY: all clean check format test lint bump-version test-unit
 
-.PHONY: check test codestyle docstyle lint pip
+PROJECT ?= poetry_git_branch_plugin
+TESTS ?= tests
 
 check: format lint
 
@@ -25,3 +25,17 @@ test-unit:
 
 test-integration:
 	poetry run pytest -m "integration"
+
+
+bump-version:
+	@old_version=$$(poetry version -s); echo "Current version: $${old_version}"; \
+		commit_message=$$(poetry version "$(COMMIT_VERSION)"); \
+		new_version=$$(poetry version -s); \
+		if [ "$${old_version}" = "$${new_version}" ]; then \
+			echo "$${old_version} version update did not change the version number."; \
+			exit 0; \
+		else \
+		  poetry install; \
+		  git commit pyproject.toml -m ":arrow_up: $${commit_message}"; \
+		  git tag -a "v$${new_version}" -m ":arrow_up: $${commit_message}"; \
+		fi
