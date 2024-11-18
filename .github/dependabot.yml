@@ -5,11 +5,34 @@
 
 version: 2
 updates:
-  - package-ecosystem: "pip" # See documentation for possible values
+  - package-ecosystem: "pip"
+    target-branch: "main"
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
     allow:
       - dependency-type: "direct"
+        dependency-name: "poetry"
+    groups:
+      all:
+        patterns:
+          - "*"
     commit-message:
       prefix: ":arrow_up:"
+    versioning-strategy: "lockfile-only"
+
+  - package-ecosystem: "pip"
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "weekly"
+    allow:
+      - dependency-type: "all"
+    ignore:
+      - dependency-name: "poetry"
+    groups:
+      all:
+        patterns:
+          - "*"
+    commit-message:
+      prefix: ":arrow_up:"
+    versioning-strategy: "increase"
