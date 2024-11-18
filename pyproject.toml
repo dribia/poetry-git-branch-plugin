@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "poetry-git-branch-plugin"
-version = "0.0.16"
+version = "0.0.17"
 description = "A poetry plugin to store the current git branch into environment variable when poetry runs any command."
 authors = ["Dribia Code <code@dribia.com>"]
 maintainers = ["Dribia Code <code@dribia.com>"]
