@@ -15,13 +15,13 @@ python = "^3.10"
 poetry = "^1.7.1"
 
 [tool.poetry.group.ci.dependencies]
-setuptools = "^80.7.1"
+setuptools = "^80.8.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = ">=3.8,<5.0"
 
 [tool.poetry.group.lint.dependencies]
-ruff = "0.11.10"
+ruff = "0.11.11"
 mypy = "1.15.0"
 
 [tool.poetry.group.test.dependencies]
