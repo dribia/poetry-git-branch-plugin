@@ -1,6 +1,6 @@
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v5.0.0
+  rev: v6.0.0
   hooks:
   - id: check-yaml
   - id: check-json
@@ -8,27 +8,27 @@ repos:
   - id: end-of-file-fixer
   - id: trailing-whitespace
 - repo: https://github.com/floatingpurr/sync_with_poetry
-  rev: 1.2.0
+  rev: 1.2.1
   hooks:
   - id: sync_with_poetry
     args:
     - --db=.pre-commit-sync.json
 - repo: https://github.com/python-jsonschema/check-jsonschema
-  rev: 0.33.0
+  rev: 0.36.0
   hooks:
   - id: check-github-workflows
 - repo: https://github.com/mrtazz/checkmake.git
-  rev: 0.2.2
+  rev: v0.3.0
   hooks:
   - id: checkmake
 - repo: https://github.com/astral-sh/ruff-pre-commit
-  rev: v0.11.7
+  rev: v0.14.10
   hooks:
-  - id: ruff
+  - id: ruff-check
     args: [ --fix ]
   - id: ruff-format
 - repo: https://github.com/pre-commit/mirrors-mypy
-  rev: v1.15.0
+  rev: v1.19.1
   hooks:
   - id: mypy
 - repo: https://github.com/python-poetry/poetry

@@ -3,6 +3,15 @@
 PROJECT ?= poetry_git_branch_plugin
 TESTS ?= tests
 
+all:
+	make clean
+	make lint || exit 1
+	make test || exit 1
+
+clean:
+	rm -rf .pytest_cache .mypy_cache .ruff_cache htmlcov
+	rm -f .coverage
+
 check: format lint
 
 format:
@@ -25,7 +34,6 @@ test-unit:
 
 test-integration:
 	poetry run pytest -m "integration"
-
 
 bump-version:
 	@old_version=$$(poetry version -s); echo "Current version: $${old_version}"; \
