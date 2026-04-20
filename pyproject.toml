@@ -21,7 +21,7 @@ setuptools = "^82.0.1"
 pre-commit = ">=3.8,<5.0"
 
 [tool.poetry.group.lint.dependencies]
-ruff = "0.15.10"
+ruff = "0.15.11"
 mypy = "1.20.1"
 
 [tool.poetry.group.test.dependencies]
@@ -31,7 +31,7 @@ pytest-cov = "^7.1.0"
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.5.3"
 mkdocs-material = "^9.7.6"
-mike = "^2.1.4"
+mike = "^2.2.0"
 
 [tool.ruff]
 
