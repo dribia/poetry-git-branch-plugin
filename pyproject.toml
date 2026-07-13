@@ -21,8 +21,8 @@ setuptools = "^83.0.0"
 pre-commit = ">=4.6.0,<5.0"
 
 [tool.poetry.group.lint.dependencies]
-ruff = "0.15.20"
-mypy = "2.1.0"
+ruff = "0.15.21"
+mypy = "2.3.0"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^9.1.1"
